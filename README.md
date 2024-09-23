@@ -11,7 +11,7 @@
 
 ### Projects:
 
-1. [Bagel game](../big_book_of_small_projects_groovy/src/main/java/com/example/big_book_groovy/bagel/Bagel.groovy)  
+1. [Bagel game](src/main/java/com/example/big_book_groovy/bagel/Bagel.groovy)  
     `> groovyc BagelGame.groovy`  
     `> groovy Bagel.groovy`  
 2. ...
