@@ -11,8 +11,10 @@
 
 ### Projects:
 
-1. [Bagel game](src/main/java/com/example/big_book_groovy/bagel/Bagel.groovy)  
-    `> groovyc BagelGame.groovy`  
-    `> groovy Bagel.groovy`  
-2. ...
+1. [Bagel game](https://sites.math.washington.edu/~mathcircle/mmc/mmc2010/PicoFermiBagel.pdf)  
+    `> chmod +x Bagel.groovy`  
+    `> Bagel.groovy`  
+2. [Birthday paradox](https://en.wikipedia.org/wiki/Birthday_problem)
+    `> chmod +x Birthday.groovy`  
+    `> Birthday.groovy`
 3. ...
