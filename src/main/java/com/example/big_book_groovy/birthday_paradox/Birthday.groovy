@@ -14,15 +14,25 @@ try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
     def userInputIterations = reader.readLine()
     def castedIterations = userInputIterations.isNumber() ? userInputIterations.toInteger() : 23
     def count = 0
-    for (i in 0..<castedIterations) {
-        def birthdays = new SecureRandom().ints(1, 366)
-                .limit(castedDays)
-                .mapToObj { LocalDate.ofYearDay(2000, it).format(DateTimeFormatter.ofPattern("d MMM")) }
-                .toList()
-        Set<String> birthdaySet = new HashSet<>()
+    (1..castedIterations).forEach {
+        def birthdays = generate_birthdays(castedDays)
+        def birthdaySet = new HashSet<String>()
         def hasDuplicate = birthdays.stream().anyMatch { !birthdaySet.add(it) }
         if (hasDuplicate) count++
     }
-    def percentage = (count / castedIterations * 100).setScale(1, RoundingMode.HALF_DOWN)
+    def percentage = calculate_percentage(count, castedIterations)
     println "${count} of ${castedIterations} iterations has duplications: ${percentage}%"
+}
+
+def calculate_percentage(count, iterations) {
+    (count / iterations * 100).setScale 1, RoundingMode.HALF_DOWN
+}
+
+def generate_birthdays(Integer count) {
+    def formatter = DateTimeFormatter.ofPattern 'd MMM'
+    new SecureRandom().ints(1, 366)
+            .limit(count)
+            .mapToObj { LocalDate.ofYearDay 2000, it }
+            .map {formatter.format it }
+            .toList()
 }
