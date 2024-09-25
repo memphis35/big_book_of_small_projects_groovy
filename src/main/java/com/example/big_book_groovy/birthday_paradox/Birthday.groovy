@@ -15,12 +15,12 @@ try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
     def castedIterations = userInputIterations.isNumber() ? userInputIterations.toInteger() : 23
     def count = 0
     (1..castedIterations).forEach {
-        def birthdays = generate_birthdays(castedDays)
+        def birthdays = generate_birthdays castedDays
         def birthdaySet = new HashSet<String>()
         def hasDuplicate = birthdays.stream().anyMatch { !birthdaySet.add(it) }
         if (hasDuplicate) count++
     }
-    def percentage = calculate_percentage(count, castedIterations)
+    def percentage = calculate_percentage count, castedIterations
     println "${count} of ${castedIterations} iterations has duplications: ${percentage}%"
 }
 
