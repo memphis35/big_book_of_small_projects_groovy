@@ -3,8 +3,7 @@ package com.example.big_book_groovy.bitmap
 
 import java.util.stream.Collectors
 
-def bitmap = '''
-....................................................................
+def bitmap = '''H....................................................................
    **************   *  *** **  *      ******************************
   ********************* ** ** *  * ****************************** *
  **      *****************       ******************************
@@ -24,8 +23,7 @@ def bitmap = '''
                     ****              **                 *******   *
                     ***                                       *    *
                     **     *                    *
-....................................................................
-'''
+....................................................................'''
 
 println '''
 Bitmap Message, displays a text message according to the provided bitmap image.
@@ -39,7 +37,7 @@ def replaceLine = (String line, String replacement) -> {
     if (line.startsWith '.') {
         buffer.append line
     } else {
-        (0..line.size()).forEach { index ->
+        (0..line.size()-1).forEach { index ->
             def bitMapChar = line.charAt index
             def replacementChar = replacement.charAt index % replacement.size()
             def result = swapCharOrDefault bitMapChar, replacementChar
