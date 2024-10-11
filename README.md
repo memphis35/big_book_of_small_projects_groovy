@@ -17,3 +17,5 @@
     - implementation is [here](src/main/java/com/example/big_book_groovy/birthday_paradox)
 3. [Bitmap image](src/main/resources/03_bitmap_message.txt)  
     - implementation is [here](src/main/java/com/example/big_book_groovy/bitmap)
+4. [BlackJack](https://en.wikipedia.org/wiki/Blackjack)
+    - implementation is [here](src/main/java/com/example/big_book_groovy/blackjack)
