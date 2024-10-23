@@ -1,5 +1,5 @@
 #!/usr/local/groovy
-package com.example.big_book_groovy.birthday_paradox
+package com.example.big_book_groovy.birthday
 
 import java.math.RoundingMode
 import java.security.SecureRandom
