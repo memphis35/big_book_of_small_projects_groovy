@@ -2,7 +2,7 @@
 
 package com.example.big_book_groovy.caesar
 
-def limits = ['RU': [65, 90], 'RL': [96, 122], 'LU': [66, 91], 'LL': [97, 123]]
+def limits = ['RU': [64, 90], 'RL': [96, 122], 'LU': [65, 91], 'LL': [97, 123]]
 
 def shift = { Integer shiftSize, Integer letter, Closure adjust ->
     def shiftedLetter = letter as Integer
@@ -17,11 +17,11 @@ def shift = { Integer shiftSize, Integer letter, Closure adjust ->
 }
 
 def shiftRight = { Integer shiftSize, Integer letter ->
-    shift shiftSize, letter, { low, upp, shifted -> shifted > upp ? low + (shifted - upp)  : shifted }
+    shift shiftSize, letter, { low, upp, shifted -> shifted > upp ? low + (shifted - upp) : shifted }
 }
 
 def shiftLeft = { Integer shiftSize, Integer letter ->
-    shift shiftSize, letter, { low, upp, shifted -> shifted < low ? upp - (shifted - upp) : shifted }
+    shift shiftSize, letter, { low, upp, shifted -> shifted < low ? upp - (low - shifted) : shifted }
 }
 
 println 'Caesar Cipher, by Aleksandr Smirnov [aa.smirnov2@gmail.com]'
@@ -52,8 +52,8 @@ try (def br = new BufferedReader(new InputStreamReader(System.in))) {
 
     def builder = new StringBuilder(userInputPhrase.size())
     def doShift = (isEncrypt ? shiftRight : shiftLeft).curry(shiftSize)
-            userInputPhrase.chars()
-                    .map { doShift it }
-                    .forEach { builder.append(it as char) }
+    userInputPhrase.chars()
+            .map { doShift it }
+            .forEach { builder.append(it as char) }
     println builder.toString()
 }
