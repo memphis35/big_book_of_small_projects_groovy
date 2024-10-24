@@ -11,17 +11,11 @@
 
 ### Projects:
 
-1. [Bagel game](https://sites.math.washington.edu/~mathcircle/mmc/mmc2010/PicoFermiBagel.pdf)  
-    - implementation is [here](src/main/java/com/example/big_book_groovy/bagel)
-2. [Birthday paradox](https://en.wikipedia.org/wiki/Birthday_problem)  
-    - implementation is [here](src/main/java/com/example/big_book_groovy/birthday)
-3. [Bitmap image](src/main/resources/03_bitmap_message.txt)  
-    - implementation is [here](src/main/java/com/example/big_book_groovy/bitmap)
-4. [BlackJack](https://en.wikipedia.org/wiki/Blackjack)
-    - implementation is [here](src/main/java/com/example/big_book_groovy/blackjack)
-5. Bouncing DVD (pending)
-    - suspended until JavaFX has been added
-6. [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
-    - implementation is [here](src/main/java/com/example/big_book_groovy/caesar)
-7. Caesar hacker
-    - implementation is [here](src/main/java/com/example/big_book_groovy/caesar)
+1. [Bagel game](https://sites.math.washington.edu/~mathcircle/mmc/mmc2010/PicoFermiBagel.pdf), [implementation](src/main/java/com/example/big_book_groovy/bagel)
+2. [Birthday paradox](https://en.wikipedia.org/wiki/Birthday_problem), [implementation](src/main/java/com/example/big_book_groovy/birthday)
+3. [Bitmap image](src/main/resources/03_bitmap_message.txt), [implementation](src/main/java/com/example/big_book_groovy/bitmap)
+4. [BlackJack](https://en.wikipedia.org/wiki/Blackjack), [implementation](src/main/java/com/example/big_book_groovy/blackjack)
+5. Bouncing DVD, suspended until JavaFX has been added
+6. [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher), [implementation](src/main/java/com/example/big_book_groovy/caesar)
+7. Caesar hacker, [implementation](src/main/java/com/example/big_book_groovy/hacker)
+8. Calendar maker, [implementation](src/main/java/com/example/big_book_groovy/calendar)
