@@ -2,50 +2,47 @@
 
 package com.example.big_book_groovy.caesar
 
-def shiftRight = (Integer shiftSize, Integer letter) -> {
+def limits = ['RU': [65, 90], 'RL': [96, 122], 'LU': [66, 91], 'LL': [97, 123]]
+
+def shift = { Integer shiftSize, Integer letter, Closure adjust ->
     def shiftedLetter = letter as Integer
     def charLetter = letter as Character
     if (charLetter.isLetter()) {
+        def limitsKey = "${shiftSize > 0 ? 'R' : 'L'}${charLetter.isUpperCase() ? 'U' : 'L'}"
+        def (lower, upper) = limits.get(limitsKey.toString())
         shiftedLetter = letter + shiftSize
-        def lowerLimit = charLetter.isUpperCase() ? 64 : 96
-        def upperLimit = charLetter.isUpperCase() ? 90 : 122
-        if (shiftedLetter > upperLimit) {
-            shiftedLetter = lowerLimit + (shiftedLetter - upperLimit)
-        }
+        shiftedLetter = adjust lower, upper, shiftedLetter
     }
     shiftedLetter
 }
 
-def shiftLeft = (Integer shiftSize, Integer letter) -> {
-    def shiftedLetter = letter as Integer
-    def charLetter = letter as Character
-    if (charLetter.isLetter()) {
-        shiftedLetter = letter - shiftSize
-        def lowerLimit = charLetter.isUpperCase() ? 65 : 97
-        def upperLimit = charLetter.isUpperCase() ? 91 : 123
-        if (shiftedLetter < lowerLimit) {
-            shiftedLetter = upperLimit - (lowerLimit - shiftedLetter)
-        }
-    }
-    shiftedLetter
+def shiftRight = { Integer shiftSize, Integer letter ->
+    shift shiftSize, letter, { low, upp, shifted -> shifted > upp ? low + (shifted - upp)  : shifted }
 }
 
+def shiftLeft = { Integer shiftSize, Integer letter ->
+    shift shiftSize, letter, { low, upp, shifted -> shifted < low ? upp - (shifted - upp) : shifted }
+}
+
+println 'Caesar Cipher, by Aleksandr Smirnov [aa.smirnov2@gmail.com]'
 try (def br = new BufferedReader(new InputStreamReader(System.in))) {
-    println 'Caesar Cipher, by Aleksandr Smirnov [aa.smirnov2@gmail.com]'
     print 'Do you want to (e)ncrypt or (d)ecrypt? Your input is: '
     def userInputOp = br.readLine()
-    while (!(userInputOp ==~ /^[de]$/)) {
+    while (!userInputOp.isBlank() && !(userInputOp ==~ /^[de]$/)) {
         print 'Incorrect option has been chosen. Please, choose (e)ncrypt or (d)ecrypt: '
         userInputOp = br.readLine()
     }
-    def action = userInputOp == 'e' ? 'encrypt' : 'decrypt'
+
     print 'Please, enter the key (1-25): '
     def userInputShiftSize = br.readLine()
-    while (!(userInputShiftSize ==~ /^\d{1,2}$/) && !(1..25).containsWithinBounds(userInputShiftSize.toInteger())) {
+    while (userInputShiftSize.isNumber() && !(1..25).containsWithinBounds(userInputShiftSize.toInteger())) {
         print 'Incorrect option has been chosen. Please, choose a number between 1 and 25: '
         userInputShiftSize = br.readLine()
     }
-    def shiftSize = userInputShiftSize.toInteger()
+    def isEncrypt = userInputOp == 'e'
+    def action = isEncrypt ? 'encrypt' : 'decrypt'
+    def shiftSize = userInputShiftSize.toInteger() * (action == 'encrypt' ? 1 : -1)
+
     print "Enter the message to $action: "
     def userInputPhrase = br.readLine()
     while (!(userInputPhrase ==~ /^[a-zA-Z ,]+$/)) {
@@ -54,9 +51,9 @@ try (def br = new BufferedReader(new InputStreamReader(System.in))) {
     }
 
     def builder = new StringBuilder(userInputPhrase.size())
-    def shift = (userInputOp == 'e' ? shiftRight : shiftLeft).curry(shiftSize)
-    userInputPhrase.chars()
-            .map { shift it }
-            .forEach { builder.append(it as char) }
+    def doShift = (isEncrypt ? shiftRight : shiftLeft).curry(shiftSize)
+            userInputPhrase.chars()
+                    .map { doShift it }
+                    .forEach { builder.append(it as char) }
     println builder.toString()
 }
