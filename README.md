@@ -21,3 +21,4 @@
 8. Calendar maker, [implementation](src/main/java/com/example/big_book_groovy/calendar)
 9. Carrot in a box, [implementation](src/main/java/com/example/big_book_groovy/carrot)
 10. Cho-Han, [implementation](src/main/java/com/example/big_book_groovy/chohan)
+11. Clickbait Headline Generator, [implementation](src/main/java/com/example/big_book_groovy/clickbait)
