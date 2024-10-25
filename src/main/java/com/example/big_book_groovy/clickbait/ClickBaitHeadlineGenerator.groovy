@@ -4,7 +4,7 @@ package com.example.big_book_groovy.clickbait
 
 def random = new Random()
 
-def pickRandomItem = { List<?> collection ->
+def pickRandomItem = { List<String> collection ->
     collection.get(random.nextInt(collection.size()))
 }
 def nouns = ['Robots', 'Reptiles', 'Aliens', 'Martians', 'Lunatics',
