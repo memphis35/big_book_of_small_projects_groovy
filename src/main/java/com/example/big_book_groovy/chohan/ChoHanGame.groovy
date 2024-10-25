@@ -27,9 +27,9 @@ try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
         def diceTwo = random.nextInt(1, 7)
         def sum = diceOne + diceTwo
         println """
-        The dealer swirls the cup and you hear the rattle of dice. 
-        The dealer slams the cup on the floor, still covering the
-        dice and asks for your bet.
+The dealer swirls the cup and you hear the rattle of dice.         
+The dealer slams the cup on the floor, still covering the
+dice and asks for your bet.
         CHO (even) or HAN (odd)?"""
         print '>>> '
         def userInputAnswer = reader.readLine()
@@ -51,6 +51,7 @@ try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
             println 'You have lost all your money. The game is over.'
             break
         }
+
         println 'Would you like to play another round? (y/yes/n/no/any key): '
         print '>>> '
         def userInputConsent = reader.readLine()
