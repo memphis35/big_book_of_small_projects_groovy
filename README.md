@@ -19,3 +19,4 @@
 6. [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher), [implementation](src/main/java/com/example/big_book_groovy/caesar)
 7. Caesar hacker, [implementation](src/main/java/com/example/big_book_groovy/hacker)
 8. Calendar maker, [implementation](src/main/java/com/example/big_book_groovy/calendar)
+9. Carrot in a box, [implementation](src/main/java/com/example/big_book_groovy/carrot)
