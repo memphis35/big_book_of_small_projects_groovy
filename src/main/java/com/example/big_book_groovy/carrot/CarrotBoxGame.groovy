@@ -3,13 +3,16 @@ package com.example.big_book_groovy.carrot
 
 def random = new Random()
 
+def normalizeName = { String name ->
+    name.trim().toLowerCase().capitalize()
+}
 def adjustName = { String name ->
     if (name.size() > 6) {
         name = name.substring 0, 6
     } else if (name.size() < 6) {
         name = name + ' '.repeat(6 - name.size())
     }
-    name.capitalize()
+    name
 }
 
 def showClosedBoxes = { p1, p2 ->
@@ -68,10 +71,10 @@ println 'Carrot in a Box, by Aleksandr Smirnov [aa.smirnov2@gmail.com]'
 
 try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
     print 'Player 1, enter your name: '
-    def playerOne = reader.readLine().trim()
+    def playerOne = normalizeName reader.readLine()
     def playerOneAdj = adjustName playerOne
     print 'Player 2, enter your name: '
-    def playerTwo = reader.readLine().trim()
+    def playerTwo = normalizeName reader.readLine()
     def playerTwoAdj = adjustName playerTwo
 
     println 'HERE ARE TWO BOXES:'
@@ -100,7 +103,11 @@ try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
     reader.readLine()
 
     print "$playerTwo, do you want to swap boxes with $playerOne? (y/n): "
-    def playerTwoInputAnswer = reader.readLine() //TODO validate
+    def playerTwoInputAnswer = reader.readLine()
+    while (playerTwoInputAnswer ==~ /[^yn]/) {
+        print 'Wrong input. Please, choose (y)es or (n)o: '
+        playerTwoInputAnswer = reader.readLine()
+    }
     isCarrotInGoldBox = playerTwoInputAnswer == 'y' ? !isCarrotInGoldBox : isCarrotInGoldBox
     def winner = isCarrotInGoldBox ? playerOne : playerTwo
     if (isCarrotInGoldBox) {
