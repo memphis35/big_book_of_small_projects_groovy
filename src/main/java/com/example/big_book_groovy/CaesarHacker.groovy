@@ -1,6 +1,6 @@
 #!/usr/local/groovy
 
-package com.example.big_book_groovy.hacker
+package com.example.big_book_groovy
 
 def limits = ['LU': [65, 91], 'LL': [97, 123]]
 

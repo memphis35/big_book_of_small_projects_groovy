@@ -1,5 +1,5 @@
 #!/usr/local/groovy
-package com.example.big_book_groovy.carrot
+package com.example.big_book_groovy
 
 def random = new Random()
 

@@ -1,6 +1,6 @@
 #!/usr/local/groovy
 
-package com.example.big_book_groovy.calendar
+package com.example.big_book_groovy
 
 import java.time.LocalDate
 import java.time.Month

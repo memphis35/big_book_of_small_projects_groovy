@@ -1,6 +1,6 @@
 #!/usr/local/groovy
 
-package com.example.big_book_groovy.caesar
+package com.example.big_book_groovy
 
 def limits = ['RU': [64, 90], 'RL': [96, 122], 'LU': [65, 91], 'LL': [97, 123]]
 

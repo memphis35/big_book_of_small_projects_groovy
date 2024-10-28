@@ -11,14 +11,15 @@
 
 ### Projects:
 
-1. Bagel game, [implementation](src/main/java/com/example/big_book_groovy/bagel)
-2. Birthday paradox, [implementation](src/main/java/com/example/big_book_groovy/birthday)
-3. Bitmap image, [implementation](src/main/java/com/example/big_book_groovy/bitmap)
-4. BlackJack, [implementation](src/main/java/com/example/big_book_groovy/blackjack)
+1. Bagel game, [implementation](src/main/java/com/example/big_book_groovy/BagelGame.groovy)
+2. Birthday paradox, [implementation](src/main/java/com/example/big_book_groovy/BirthdayParadox.groovy)
+3. Bitmap image, [implementation](src/main/java/com/example/big_book_groovy/BitmapImage.groovy)
+4. BlackJack, [implementation](src/main/java/com/example/big_book_groovy/BlackJack.groovy)
 5. Bouncing DVD, suspended until JavaFX has been added
-6. Caesar cipher, [implementation](src/main/java/com/example/big_book_groovy/caesar)
-7. Caesar hacker, [implementation](src/main/java/com/example/big_book_groovy/hacker)
-8. Calendar maker, [implementation](src/main/java/com/example/big_book_groovy/calendar)
-9. Carrot in a box, [implementation](src/main/java/com/example/big_book_groovy/carrot)
-10. Cho-Han, [implementation](src/main/java/com/example/big_book_groovy/chohan)
-11. Clickbait Headline Generator, [implementation](src/main/java/com/example/big_book_groovy/clickbait)
+6. Caesar cipher, [implementation](src/main/java/com/example/big_book_groovy/CaesarCipher.groovy)
+7. Caesar hacker, [implementation](src/main/java/com/example/big_book_groovy/CaesarHacker.groovy)
+8. Calendar maker, [implementation](src/main/java/com/example/big_book_groovy/CalendarMaker.groovy)
+9. Carrot in a box, [implementation](src/main/java/com/example/big_book_groovy/CarrotBoxGame.groovy)
+10. Cho-Han, [implementation](src/main/java/com/example/big_book_groovy/ChoHanGame.groovy)
+11. Clickbait Headline Generator, [implementation](src/main/java/com/example/big_book_groovy/ClickBaitHeadlineGenerator.groovy)
+12. Collatz Problem, [implementation](src/main/java/com/example/big_book_groovy/CollatzProblem.groovy)

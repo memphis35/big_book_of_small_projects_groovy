@@ -1,5 +1,5 @@
 #!/usr/local/groovy
-package com.example.big_book_groovy.bitmap
+package com.example.big_book_groovy
 
 import java.util.stream.Collectors
 

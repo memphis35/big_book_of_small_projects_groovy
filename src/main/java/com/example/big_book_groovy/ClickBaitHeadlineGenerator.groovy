@@ -1,6 +1,6 @@
 #!/usr/local/groovy
 
-package com.example.big_book_groovy.clickbait
+package com.example.big_book_groovy
 
 def random = new Random()
 

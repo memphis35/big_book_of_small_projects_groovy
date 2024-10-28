@@ -1,6 +1,6 @@
 #!/usr/local/groovy
 
-package com.example.big_book_groovy.chohan
+package com.example.big_book_groovy
 
 println '''Cho-Han, by Aleksandr Smirnov [aa.smirnov2@gmail.com]
 In this traditional Japanese dice game, two dice are rolled in a bamboo

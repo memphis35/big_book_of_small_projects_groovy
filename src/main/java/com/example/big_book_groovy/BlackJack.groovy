@@ -1,6 +1,6 @@
 #!/usr/local/groovy
 
-package com.example.big_book_groovy.blackjack
+package com.example.big_book_groovy
 
 import java.util.stream.Collectors
 

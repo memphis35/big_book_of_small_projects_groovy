@@ -1,5 +1,5 @@
 #!/usr/local/groovy
-package com.example.big_book_groovy.bagel
+package com.example.big_book_groovy
 
 import java.security.SecureRandom
 import java.util.stream.Collectors
