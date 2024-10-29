@@ -45,6 +45,12 @@ def render_field = { List<List<Boolean>> field ->
 }
 
 // start of the script
+println '''
+Conway's Game of life, by Aleksandr Smirnov [aa.smirnov2@gmail.com]
+ - Living cells with two or three neighbors stay alive in the next step of the simulation.
+ - Dead cells with exactly three neighbors become alive in the next step of the simulation.
+ - Any other cell dies or stays dead in the next step of the simulation.
+'''
 def currentGen = generate_field height, width, density
 def someAreAlive = currentGen.stream().flatMap { it.stream() }.anyMatch { it }
 
