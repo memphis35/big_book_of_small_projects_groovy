@@ -38,10 +38,10 @@ def renderClock = { String clock ->
 
 try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
     println 'Countdown timer, by Aleksandr Smirnov [aa,smirnov2@gmail.com]'
-    print 'Enter desirable period in seconds: \n >>> '
+    print 'Enter desirable period in seconds: \n>>> '
     def userInputSeconds = reader.readLine()
     while (!userInputSeconds.isInteger() || userInputSeconds.toInteger() <= 0) {
-        print 'Wrong input. Enter a positive integer value: \n >>> '
+        print 'Wrong input. Enter a positive integer value: \n>>> '
         userInputSeconds = reader.readLine()
     }
     def totalInSeconds = userInputSeconds.toInteger()

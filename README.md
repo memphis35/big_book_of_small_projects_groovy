@@ -26,3 +26,4 @@
 13. Conway's Game of life, [implementation](src/main/java/com/example/big_book_groovy/ConwayGameOfLife.groovy)
 14. Countdown timer, [implementation](src/main/java/com/example/big_book_groovy/CountDownTimer.groovy)
 15. Deep cave, [implementation](src/main/java/com/example/big_book_groovy/DeepCave.groovy)
+16. Diamonds, [implementation](src/main/java/com/example/big_book_groovy/Diamonds.groovy)

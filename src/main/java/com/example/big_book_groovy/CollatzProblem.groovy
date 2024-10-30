@@ -16,12 +16,10 @@ It is generally thought, but so far not mathematically proven, that every starti
 '''
 
 try (def reader = new BufferedReader(new InputStreamReader(System.in))) {
-    println 'Enter a starting number (greater than 0): '
-    print '>>> '
+    print 'Enter a starting number (greater than 0):\n>>> '
     def userInputNumber = reader.readLine()
     while (!userInputNumber.isBigInteger() || (userInputNumber.toBigInteger() <=> BigInteger.ZERO) <= 0) {
-        println 'Wrong input. Please, enter a positive integer number: '
-        print '>>> '
+        print 'Wrong input. Please, enter a positive integer number:\n>>> '
         userInputNumber = reader.readLine()
     }
     def number = userInputNumber.toBigInteger()
