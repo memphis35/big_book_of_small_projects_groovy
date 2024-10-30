@@ -23,5 +23,6 @@
 10. Cho-Han, [implementation](src/main/java/com/example/big_book_groovy/ChoHanGame.groovy)
 11. Clickbait Headline Generator, [implementation](src/main/java/com/example/big_book_groovy/ClickBaitHeadlineGenerator.groovy)
 12. Collatz Problem, [implementation](src/main/java/com/example/big_book_groovy/CollatzProblem.groovy)
-13. Conway's Game of life [implementation](src/main/java/com/example/big_book_groovy/ConwayGameOfLife.groovy)
-14. Countdown timer [implementation](src/main/java/com/example/big_book_groovy/CountDownTimer.groovy)
+13. Conway's Game of life, [implementation](src/main/java/com/example/big_book_groovy/ConwayGameOfLife.groovy)
+14. Countdown timer, [implementation](src/main/java/com/example/big_book_groovy/CountDownTimer.groovy)
+15. Deep cave, [implementation](src/main/java/com/example/big_book_groovy/DeepCave.groovy)
