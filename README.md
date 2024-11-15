@@ -28,3 +28,4 @@
 15. Deep cave, [implementation](src/main/java/com/example/big_book_groovy/DeepCave.groovy)
 16. Diamonds, [implementation](src/main/java/com/example/big_book_groovy/Diamonds.groovy)
 17. Dice Math, [implementation](src/main/java/com/example/big_book_groovy/DiceMath.groovy)
+18. Dice Roller, [implementation](src/main/java/com/example/big_book_groovy/DiceRoller.groovy)
