@@ -15,7 +15,7 @@
 2. Birthday paradox, [implementation](src/main/java/com/example/big_book_groovy/BirthdayParadox.groovy)
 3. Bitmap image, [implementation](src/main/java/com/example/big_book_groovy/BitmapImage.groovy)
 4. BlackJack, [implementation](src/main/java/com/example/big_book_groovy/BlackJack.groovy)
-5. Bouncing DVD, suspended until JavaFX has been added
+5. Bouncing DVD, not implemented
 6. Caesar cipher, [implementation](src/main/java/com/example/big_book_groovy/CaesarCipher.groovy)
 7. Caesar hacker, [implementation](src/main/java/com/example/big_book_groovy/CaesarHacker.groovy)
 8. Calendar maker, [implementation](src/main/java/com/example/big_book_groovy/CalendarMaker.groovy)
@@ -29,3 +29,5 @@
 16. Diamonds, [implementation](src/main/java/com/example/big_book_groovy/Diamonds.groovy)
 17. Dice Math, [implementation](src/main/java/com/example/big_book_groovy/DiceMath.groovy)
 18. Dice Roller, [implementation](src/main/java/com/example/big_book_groovy/DiceRoller.groovy)
+19. Digital Clock, not implemented
+20. Digital Stream, [implementation](src/main/java/com/example/big_book_groovy/DigitalStream.groovy)
