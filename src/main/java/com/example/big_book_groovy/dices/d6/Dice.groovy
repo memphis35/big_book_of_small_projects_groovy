@@ -13,4 +13,14 @@ class Dice implements IDice {
         this.lines = Collections.unmodifiableList(lines)
         this.value = value
     }
+
+    @Override
+    List<String> getLines() {
+        lines
+    }
+
+    @Override
+    Integer getValue() {
+        value
+    }
 }
