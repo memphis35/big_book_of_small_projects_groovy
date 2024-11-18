@@ -6,7 +6,7 @@ def final DENSITY = 0.18
 def final STREAM_SIZE_MIN = 6
 def final STREAM_SIZE_MAX = 14
 def final SYMBOLS = "0123456789"
-def final LINE = (0..<100).collect { [] }
+def final LINE = (0..<135).collect { [] }
 
 def rand = new Random()
 
@@ -30,5 +30,5 @@ while (true) {
         toPrint << symbol << ' '
     }
     println toPrint
-    Thread.sleep(400L)
+    Thread.sleep(100L)
 }
