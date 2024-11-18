@@ -31,3 +31,4 @@
 18. Dice Roller, [implementation](src/main/java/com/example/big_book_groovy/DiceRoller.groovy)
 19. Digital Clock, not implemented
 20. Digital Stream, [implementation](src/main/java/com/example/big_book_groovy/DigitalStream.groovy)
+21. DNA Visualization, [implementation](src/main/java/com/example/big_book_groovy/DNA.groovy)
